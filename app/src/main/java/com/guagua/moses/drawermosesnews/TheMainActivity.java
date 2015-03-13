@@ -70,7 +70,7 @@ public class TheMainActivity extends ActionBarActivity {
             }
         });
 
-        mDrawerItems = new String[]{"新闻", "视频", "图片", "天气", "更多"};
+        mDrawerItems = new String[]{"新闻", "视频", "图片", "天气", "设置", "地图"};
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this,
                 mDrawerLayout,
@@ -147,6 +147,15 @@ public class TheMainActivity extends ActionBarActivity {
                         break;
                     case 4:
                         startActivity(new Intent(TheMainActivity.this, SettingActivity.class));
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        mDrawerLayout.closeDrawer(mDrawerListView);
+                        break;
+                    case 5:
+                        startActivity(new Intent(TheMainActivity.this, LocationActivity.class));
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException e) {
