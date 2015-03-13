@@ -275,6 +275,11 @@ public class TheMainActivity extends ActionBarActivity {
                             getResources().getDrawable(R.drawable.sliding_navigation_tab_more),
                             null, null, null);
                     break;
+                case 5:
+                    textView.setCompoundDrawablesWithIntrinsicBounds(
+                            getResources().getDrawable(R.drawable.sliding_navigation_tab_pics),
+                            null, null, null);
+                    break;
                 default:
                     break;
 
